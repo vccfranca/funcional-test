@@ -17,7 +17,8 @@ public class TasksTest {
 	public WebDriver acessarAplicacao() throws MalformedURLException {
 //		WebDriver driver = new ChromeDriver();
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.163:4444/wd/hub"), cap ); 
+		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.121:4444/wd/hub"), cap );
+//		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.0.163:4444/wd/hub"), cap );
 		driver.navigate().to("http://192.168.0.121:8085/tasks");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
